@@ -7,6 +7,8 @@
 # your Debian/Ubuntu/CentOS box. It has been designed to be as unobtrusive and
 # universal as possible.
 
+# Script forked from : https://github.com/Nyr/openvpn-install
+
 ## Allow or not verbose mode
 TEST_VERBOSE=$(echo $@ | grep -o "verbose")
 
