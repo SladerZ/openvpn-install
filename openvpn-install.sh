@@ -7,6 +7,14 @@
 # your Debian/Ubuntu/CentOS box. It has been designed to be as unobtrusive and
 # universal as possible.
 
+## Allow or not verbose mode
+TEST_VERBOSE=$(echo $@ | grep -o "verbose")
+
+if [ "$TEST_VERBOSE" == "verbose" ]
+then
+        set -xv
+        shift
+fi
 
 # Detect Debian users running the script with "sh" instead of bash
 if readlink /proc/$$/exe | grep -qs "dash"; then
